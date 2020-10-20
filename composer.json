@@ -1,0 +1,45 @@
+{
+    "name": "boshurik/unique-model-constraint",
+    "description": "Unique model validator for doctrine ORM and ODM ",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BoShurik",
+            "email": "boshurik@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BoShurik\\Constraints\\Model\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BoShurik\\Constraints\\Model\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.4|^8.0",
+        "symfony/validator": "^5.0",
+        "doctrine/persistence": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "symfony/phpunit-bridge": "^4.2|^5.0"
+    },
+    "suggest": {
+        "doctrine/orm": "To validate entities",
+        "doctrine/mongodb-odm": "To validate documents"
+    },
+    "scripts": {
+        "test": "vendor/bin/simple-phpunit",
+        "coverage": "vendor/bin/simple-phpunit --coverage-html build/coverage",
+        "cs-check": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi --dry-run",
+        "cs-fix": "vendor/bin/php-cs-fixer fix --allow-risky=yes --diff --ansi",
+        "checks": [
+            "@cs-check",
+            "@test"
+        ]
+    }
+}
