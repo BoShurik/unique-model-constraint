@@ -2,6 +2,12 @@
 
 Port of `UniqueEntity` constraint
 
+## Installation
+
+```bash
+composer require boshurik/unique-model-constraint
+```
+
 ## Symfony integration
 
 ```yaml
